@@ -1,0 +1,27 @@
+<template name="27b45110">
+  <view class="_view data-v-5d67b689 sd_jh_deer">
+    <view class="_view data-v-5d67b689 fz30 cf cen">
+      <image src="../../static/img/logo.png" class="_image data-v-5d67b689 logo_ert"></image>
+      <view class="_view data-v-5d67b689 mt20">
+        <image src="../../static/img/sjh_d.png" class="_image data-v-5d67b689 sd_deerty"></image>
+      </view>
+    </view>
+    <view class="_view data-v-5d67b689 s_qc_derdf">
+      <view class="_view data-v-5d67b689 saoma_sd cen" bindtap="handleProxy" data-eventid="{{'sN0-0'}}" data-comkey="{{$k}}">
+        <image src="../../static/img/qc_icon.png" class="_image data-v-5d67b689"></image>
+        <view class="_view data-v-5d67b689 fz32 ls">开启扫描</view>
+      </view>
+      <view class="_view data-v-5d67b689 ls cen fz32 sdf_jh_de4ert"> 苍鸟如何做到防伪唯一性 </view>
+    </view>
+    <view class="_view data-v-5d67b689 dibu_deer pt10 pm10 dx_row cen">
+      <view class="_view data-v-5d67b689 dx_col_12 ">
+        <image src="../../static/img/bottom/dsfdsfa_b.png" class="_image data-v-5d67b689 shouye_eet"></image>
+        <view class="_view data-v-5d67b689 fz26 ls"> 首页 </view>
+      </view>
+      <view class="_view data-v-5d67b689 dx_col_12 " bindtap="handleProxy" data-eventid="{{'nr7-1'}}" data-comkey="{{$k}}">
+        <image src="../../static/img/bottom/dsfdsfb_a.png" class="_image data-v-5d67b689 shouye_eet"></image>
+        <view class="_view data-v-5d67b689 fz26 z9"> 查真伪 </view>
+      </view>
+    </view>
+  </view>
+</template>

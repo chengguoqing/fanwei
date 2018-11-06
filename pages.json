@@ -1,0 +1,57 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/star/qidon_index",
+			"style": {
+				"app-plus": {
+					"titleNView": "transparent"
+				}
+			}
+		}, {
+			"path": "pages/user/denglu",
+			"style": {
+				"app-plus": {
+					"titleNView": "transparent"
+				}
+			}
+		},{
+			"path": "pages/star/index",
+			"style": {
+				"app-plus": {
+					"titleNView": "transparent"
+				}
+			}
+		}, {
+			"path": "pages/check_results/index",
+			"style": {
+				"navigationBarTitleText": "查询结果",
+				"app-plus": {
+					"bounce": "none", //关闭窗口回弹效果
+					"titleNView": {
+						"buttons": [ //原生标题栏按钮配置,
+							{
+								"text": "\ue600",
+								"fontSize": "22",
+								"fontSrc": "static/fonts/iconfont.ttf"
+							}
+						]
+					}
+				}
+			}
+		}, {
+			"path": "pages/index/index",
+			"style": {
+				"app-plus": {
+					"titleNView": "transparent"
+				}
+			}
+		}
+
+	],
+	"globalStyle": {
+		"navigationBarTitleText": "",
+		"navigationBarBackgroundColor": "#1F307F",
+		"backgroundColor": "#1F307F"
+	}
+
+}

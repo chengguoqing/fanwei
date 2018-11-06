@@ -1,0 +1,87 @@
+
+.sdf_df_Ddff.act .fmeg_def.data-v-76922594 {
+  border: 6rpx solid #9B000B;
+}
+.sdf_df_Ddff.act .cf_jhhddfg.data-v-76922594 {
+  background: #9B000B;
+}
+.sdf_df_Ddff.act .zhuse.data-v-76922594 {
+  color: #9B000B !important;
+}
+.fmeg_def.data-v-76922594 {
+  height: 420rpx;
+  border: 6rpx solid #10A994;
+}
+.fmeg_def image.data-v-76922594 {
+  width: 100%;
+  height: 100%;
+}
+.cf_jhhddfg.data-v-76922594 {
+  min-height: 200rpx;
+  background: #10A994;
+  margin-top: 100rpx;
+}
+.jiabao_der.data-v-76922594 {
+  width: 229rpx;
+  height: 72rpx;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: -70rpx;
+}
+.logo_eertx.data-v-76922594 {
+  width: 57rpx;
+  height: 108rpx;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: -60rpx;
+}
+.ye.data-v-76922594 {
+  color: #ffd789 !important;
+}
+.success.data-v-76922594 {
+  width: 53rpx;
+  height: 53rpx;
+}
+.zhuse.data-v-76922594 {
+  color: #11a994;
+}
+.er_jh_der.data-v-76922594 {
+  border-top: 1px solid #7484BB;
+  text-align: center;
+}
+.er_jh_der text.data-v-76922594 {
+  background: #fff;
+  padding: 10rpx;
+  position: relative;
+  top: -20rpx;
+}
+.derf_jh_e_cert.data-v-76922594 {
+  line-height: 1;
+  border-left: 4rpx solid #10A994;
+}
+.derf_jh_e_cert.ab.data-v-76922594 {
+  border-left: 4rpx solid #9B000B;
+}
+.uyt_lit_list.data-v-76922594 {
+  background: #10A994;
+  padding-right: 160rpx;
+}
+.uyt_lit_list.ab.data-v-76922594 {
+  background: #9B000B;
+}
+.sd_jh_ceert.data-v-76922594 {
+  width: 120rpx;
+  height: 120rpx;
+  background: #fff;
+}
+.zheng_a_eerr.data-v-76922594 {
+  width: 130rpx;
+  height: 100rpx;
+  position: absolute;
+  right: 20rpx;
+  top: 30rpx;
+}
