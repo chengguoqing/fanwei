@@ -1,1 +1,35 @@
-{"description":"项目配置文件。","packOptions":{"ignore":[]},"setting":{"urlCheck":true,"es6":true,"postcss":false,"minified":false,"newFeature":true},"compileType":"miniprogram","libVersion":"1.9.98","appid":"wx30f2eb708506f491","projectname":"苍鸟防伪","condition":{"search":{"current":-1,"list":[]},"conversation":{"current":-1,"list":[]},"game":{"current":-1,"list":[]},"miniprogram":{"current":-1,"list":[]}}}
+{
+	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": false,
+		"minified": false,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.9.98",
+	"appid": "wx30f2eb708506f491",
+	"projectname": "%E8%8B%8D%E9%B8%9F%E9%98%B2%E4%BC%AA",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": []
+		}
+	}
+}

@@ -8,6 +8,10 @@ import {
 
 Vue.config.productionTip = false
 
+ 
+import v_button from './vant/button/index.vue'
+Vue.component('v_button',v_button)
+
 
 
 App.mpType = 'app'

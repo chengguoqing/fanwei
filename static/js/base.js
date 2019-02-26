@@ -1,4 +1,4 @@
-var url_d = ""
+var url_d = "https://api.cangniaowl.com/"
 exports.base = {
 	install: function(Vue, options) {
 		Vue.prototype.version = "9.2.1"
@@ -254,54 +254,30 @@ function ajax_e(url, canshu, call, ty) {
 		title: '处理中',
 		mask: true
 	});
+	try {
 
-	if (!ty) { //为true可以不传token
-		canshu.key = uni.getStorageSync('token')
+
+		let user_fo = uni.getStorageSync('user_info')
+		user_fo = JSON.parse(user_fo.rawData)
+		if (!ty) { //为true可以不传token
+			canshu.nickName = user_fo.nickName
+			canshu.avatarUrl = user_fo.avatarUrl
+			canshu.openId = user_fo.openId
+		}
+	} catch (e) {
+
 	}
+	console.log(JSON.stringify(canshu))
 	uni.request({
 		url: urlsd,
 		method: "POST",
 		header: {
 			"content-type": "application/x-www-form-urlencoded"
 		},
-		data: canshu, 
+		data: canshu,
 		success: (res) => {
 			uni.hideLoading();
-
-			if (res.data.status == 1) {
-				call(res.data.data)
-				return
-			}
-			if (res.data.status == 0||res.data.status==3024) {
-				call(res.data)
-				return
-			}
-			uni.showToast({
-				icon: "none",
-				title: res.data.msg
-			})
-			if (res.data.status == '1020') {
-				setTimeout(function() {
-					uni.navigateBack({
-						delta: 1
-					})
-				}, 1000)
-				return
-			}
-			if (res.data.status == 40003) { //重新登录
-
-				uni.reLaunch({
-					url: '/pages/user_center/Login'
-				});
-				return
-			}
-
-		},
-		fail() {
-			uni.showToast({
-				icon: "none",
-				title: "接口请求异常"
-			})
+			call(res.data.data)
 		}
 	});
 }

@@ -1,6 +1,0 @@
-<template name="66e98008"><view class="_view data-v-7217c80a sd_jh_deer"><view class="_view data-v-7217c80a fz30 cf cen df_ddrtxdr"><image src="../../static/img/logo.png" class="_image data-v-7217c80a logo_ert"></image><view class="_br data-v-7217c80a"></view>
-			苍鸟防伪
-		</view><view class="_view data-v-7217c80a form_deng"><view class="_view data-v-7217c80a ls sdf_jh_dert yj4 bgff fz30" bindtap="handleProxy" data-eventid="{{'qRU-0'}}" data-comkey="{{$k}}"><image src="../../static/img/weixin.png" class="_image data-v-7217c80a cz"></image>
-				微信一键登录
-
-			</view></view><image src="../../static/img/qiu.png" class="_image data-v-7217c80a qiu_deet"></image></view></template>

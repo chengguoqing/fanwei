@@ -27,4 +27,6 @@
 		width: 45upx;
 		height: 45upx;
 	}
-	
+	.ln{
+		line-height: 1.5;
+	}

@@ -1,7 +1,7 @@
 <template name="412433bd">
   <view class="_view data-v-76922594 pd pt20 pm20 sdf_df_Ddff  {{is_sdf ? 'act' : ''}}">
-    <view class="_view data-v-76922594 fmeg_def yj4">
-      <image src="../../static/img/sjhg_femian.jpg" class="_image data-v-76922594"></image>
+    <view class="_view data-v-76922594 fmeg_def yj4 ov">
+      <image src="{{sd.goods_thumb}}" mode="widthFix" class="_image data-v-76922594"></image>
     </view>
     <view class="_view data-v-76922594 pd pt20 pm20 cf_jhhddfg yj4 pr">
       <image src="../../static/img/jiaobiao_b.png" class="_image data-v-76922594 jiabao_der" wx:if="{{is_sdf}}"></image>
@@ -10,32 +10,41 @@
       <view class="_view data-v-76922594 pd yj4 bgff cen pt20 pm20 \tmt50 ">
         <image src="../../static/img/close.png" class="_image data-v-76922594 success" wx:if="{{is_sdf}}"></image>
         <image src="../../static/img/success.png" class="_image data-v-76922594 success" wx:else></image>
-        <view class="_view data-v-76922594 z3 fz32" wx:if="{{is_sdf}}"> 二维码已失效
-          <text class="_text data-v-76922594 zhuse">谨防假冒</text>
+        <view class="_view data-v-76922594 ln">
+          <view class="_view data-v-76922594 z3 fz32" wx:if="{{sd.status==2}}"> 二维码已失效
+            <text class="_text data-v-76922594 zhuse">谨防假冒</text>
+          </view>
+          <view class="_view data-v-76922594 z3 fz32" wx:if="{{sd.status==0}}">
+            <text class="_text data-v-76922594 zhuse">无效二维码</text>
+          </view>
+          <view class="_view data-v-76922594 z3 fz32" wx:if="{{sd.status==1}}"> 正规商品 </view>
+          <view class="_view data-v-76922594 fz26 zhuse" wx:if="{{sd.status!=0}}"> 验证结果：【{{sd.code}}】 </view>
         </view>
-        <view class="_view data-v-76922594 z3 fz32" wx:else> 正规商品 </view>
-        <view class="_view data-v-76922594 fz26 zhuse"> 验证结果：【4047013456684270036】 </view>
       </view>
-      <view class="_view data-v-76922594 pd cen fz24 ln cf mt20"> 您所查询的是广州物美食品有限公司所生产的 “健齿乐健康蔬果礼包” ，经苍鸟唯一验证，为正规产品， 请放心使用 </view>
+      <view class="_view data-v-76922594 pd cen fz24 ln cf mt20 " wx:if="{{sd.status!=0}}"> 您所查询的是{{sd.company}}所生产的 “{{sd.goods_name}}” ，经苍鸟唯一验证，为正规产品， 请放心使用 </view>
     </view>
-    <view class="_view data-v-76922594 pd er_jh_der mt40">
-      <text class="_text data-v-76922594">查询记录</text>
+    <view class="_view data-v-76922594 pd er_jh_der mt40" wx:if="{{sd.status!=0}}">
+      <text class="_text data-v-76922594 fz32">查询记录</text>
     </view>
-    <view class="_view data-v-76922594 fz20 z3 tl derf_jh_e_cert pl10">首次正品验证 </view>
-    <view class="_view data-v-76922594 uyt_lit_list yj4 pd pt20 pm20 mt20 pr">
-      <image class="_image data-v-76922594 sd_jh_ceert yj cz fl"></image>
-      <view class="_view data-v-76922594 ov pl20 fz24 cf pt30">
-        <text class="_text data-v-76922594 ye">大鼻子海盗LOL</text> 于2018-10-26 10:27:26 查询了本商品 </view>
-      <image src="../../static/img/zheng_a.png" class="_image data-v-76922594 zheng_a_eerr"></image>
-      <view class="_view data-v-76922594 qc"></view>
+    <view wx:if="{{sd.status>=1}}" class="_view data-v-76922594">
+      <view class="_view data-v-76922594 fz20 z3 tl derf_jh_e_cert pl10">首次正品验证 </view>
+      <view class="_view data-v-76922594 uyt_lit_list yj4 pd pt20 pm20 mt20 pr" wx:if="{{idx==0}}" wx:for="{{sd.list}}" wx:for-index="idx" wx:for-item="sd">
+        <image class="_image data-v-76922594 sd_jh_ceert yj cz fl" src="{{sd.avatarUrl}}"></image>
+        <view class="_view data-v-76922594 ov pl20 fz24 cf pt30 ln">
+          <text class="_text data-v-76922594 ye">{{sd.nickName}}</text> 于{{sd.addtime_format}} 查询了本商品 </view>
+        <image src="../../static/img/zheng_a.png" class="_image data-v-76922594 zheng_a_eerr"></image>
+        <view class="_view data-v-76922594 qc"></view>
+      </view>
     </view>
-    <view class="_view data-v-76922594 fz20 z3 tl derf_jh_e_cert pl10 ab mt40">失效验证 </view>
-    <view class="_view data-v-76922594 uyt_lit_list yj4 pd pt20 pm20 mt20 pr ab" wx:for="{{5}}" wx:for-index="index" wx:for-item="sd">
-      <image class="_image data-v-76922594 sd_jh_ceert yj cz fl"></image>
-      <view class="_view data-v-76922594 ov pl20 fz24 cf pt30">
-        <text class="_text data-v-76922594 ye">大鼻子海盗LOL</text> 于2018-10-26 10:27:26 查询了本商品 </view>
-      <image src="../../static/img/zheng_b.png" class="_image data-v-76922594 zheng_a_eerr"></image>
-      <view class="_view data-v-76922594 qc"></view>
+    <view wx:if="{{sd.status==2}}" class="_view data-v-76922594">
+      <view class="_view data-v-76922594 fz20 z3 tl derf_jh_e_cert pl10 ab mt40">失效验证 </view>
+      <view class="_view data-v-76922594 uyt_lit_list yj4 pd pt20 pm20 mt20 pr ab" wx:if="{{idx>0}}" wx:for="{{sd.list}}" wx:for-index="idx" wx:for-item="sd">
+        <image class="_image data-v-76922594 sd_jh_ceert yj cz fl" src="{{sd.avatarUrl}}"></image>
+        <view class="_view data-v-76922594 ov pl20 fz24 cf pt30 ln">
+          <text class="_text data-v-76922594 ye">{{sd.nickName}}</text> 于{{sd.addtime_format}} 查询了本商品 </view>
+        <image src="../../static/img/zheng_b.png" class="_image data-v-76922594 zheng_a_eerr"></image>
+        <view class="_view data-v-76922594 qc"></view>
+      </view>
     </view>
   </view>
 </template>

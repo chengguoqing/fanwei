@@ -8,7 +8,7 @@
         <image src="../../static/df_b.jpg" class="_image data-v-c95ad35e"></image>
       </swiper-item>
       <swiper-item class="_swiper-item data-v-c95ad35e">
-        <image src="../../static/df_c.jpg" bindtap="handleProxy" data-eventid="{{'1eb-0'}}" data-comkey="{{$k}}" class="_image data-v-c95ad35e"></image>
+        <image src="../../static/df_c.jpg" bindtap="handleProxy" data-eventid="{{'G0g-0'}}" data-comkey="{{$k}}" class="_image data-v-c95ad35e"></image>
       </swiper-item>
     </swiper>
   </view>

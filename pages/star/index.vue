@@ -1,14 +1,14 @@
 <template>
 	<view>
-		<swiper class="sd_deeerrt" :duration="duration">
+		<swiper class="sd_deeerrt" :duration="duration" indicator-dots indicator-color="#D6D6D6" indicator-active-color="#FFDE00">
 			<swiper-item>
-				<image src="../../static/df_a.jpg"></image>
+				<image src="../../static/df_a.png"></image>
 			</swiper-item>
 			<swiper-item>
-				<image src="../../static/df_b.jpg"></image>
+				<image src="../../static/df_b.png"></image>
 			</swiper-item>
 			<swiper-item>
-				<image src="../../static/df_c.jpg" @click="sd_jhgh_der"></image>
+				<image src="../../static/df_c.png" @click="sd_jhgh_der"></image>
 			</swiper-item>
 		</swiper>
 	</view>

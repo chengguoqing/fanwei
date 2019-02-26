@@ -2,7 +2,7 @@
     "name" : "苍鸟防伪",
     "appid" : "__UNI__A2FE6DE",
     "description" : "",
-    "versionName" : "1.0.0",
+    "versionName" : "1.1.1",
     "versionCode" : "100",
     "transformPx" : false,
     "app-plus" : {
@@ -16,43 +16,43 @@
             "android" : {
                 /* android打包配置 */
                 "permissions" : [
-                    "<uses-feature android:name=\"android.hardware.camera\"/>",
-                    "<uses-feature android:name=\"android.hardware.camera.autofocus\"/>",
                     "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>",
                     "<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>",
                     "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>",
                     "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>",
                     "<uses-permission android:name=\"android.permission.CALL_PHONE\"/>",
-                    "<uses-permission android:name=\"android.permission.CAMERA\"/>",
                     "<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>",
                     "<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>",
-                    "<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>",
                     "<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>",
                     "<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>",
                     "<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>",
                     "<uses-permission android:name=\"android.permission.READ_CONTACTS\"/>",
                     "<uses-permission android:name=\"android.permission.READ_LOGS\"/>",
                     "<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>",
-                    "<uses-permission android:name=\"android.permission.RECORD_AUDIO\"/>",
                     "<uses-permission android:name=\"android.permission.VIBRATE\"/>",
                     "<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>",
                     "<uses-permission android:name=\"android.permission.WRITE_CONTACTS\"/>",
                     "<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>"
                 ]
             },
-            "ios" : {},
+            "ios" : {
+                "privacyDescription" : {
+                    "NSPhotoLibraryUsageDescription" : "想要使用您的摄像头，用于扫描防伪码",
+                    "NSPhotoLibraryAddUsageDescription" : "想要访问您的手机相册，用于调起含有防伪码的照片"
+                }
+            },
             /* ios打包配置 */
             "sdkConfigs" : {
                 "oauth" : {
                     "weixin" : {
-                        "appid" : "wxd30e3955b1735b8e",
-                        "appsecret" : "847e35cc29e6463272b5fd02b5867de3"
+                        "appid" : "wx34af8abbe0877709",
+                        "appsecret" : "2a6ed4701dbe8456f09f7a897abf073c"
                     }
                 }
             },
             "icons" : {
                 "ios" : {
-                    "appstore" : "F:/效果图/防伪/4苍鸟防伪-图标.png",
+                    "appstore" : "F:/1024.png",
                     "ipad" : {
                         "app" : "unpackage/res/icons/76x76.png",
                         "app@2x" : "unpackage/res/icons/152x152.png",
@@ -92,10 +92,23 @@
                         "retina40l" : "F:/效果图/防伪/iPhone启动页尺寸/640 1136横.png",
                         "retina47" : "F:/效果图/防伪/iPhone启动页尺寸/750 1334竖.png",
                         "retina47l" : "F:/效果图/防伪/iPhone启动页尺寸/750 1334横.png",
-                        "retina55" : "F:/效果图/防伪/iPhone启动页尺寸/1204 2208竖.png",
-                        "retina55l" : "F:/效果图/防伪/iPhone启动页尺寸/1204 2208横.png",
+                        "retina55" : "F:/效果图/新建文件夹/1242 2208横.png",
+                        "retina55l" : "F:/效果图/新建文件夹/1242 2208横.png",
                         "iphonex" : "F:/效果图/防伪/iPhone启动页尺寸/1125 2436竖.png",
                         "iphonexl" : "F:/效果图/防伪/iPhone启动页尺寸/1125 2436横.png"
+                    },
+                    "plistcmds" : [ "Set :NSCameraUsageDescription 苍鸟防伪需要访问您的相机" ],
+                    "ipad" : {
+                        "portrait" : "F:/效果图/新建文件夹/768x1004.png",
+                        "portrait-retina" : "F:/效果图/新建文件夹/1536x2008.png",
+                        "landscape" : "F:/效果图/新建文件夹/1024x748.png",
+                        "landscape-retina" : "F:/效果图/新建文件夹/2048x1496.png",
+                        "portrait7" : "F:/效果图/新建文件夹/768x1024.png",
+                        "portrait-retina7" : "F:/效果图/新建文件夹/1536x2048.png",
+                        "landscape7" : "F:/效果图/新建文件夹/1024x768.png",
+                        "landscape-retina7" : "F:/效果图/新建文件夹/2048x1536.png",
+                        "portrait-1366h@2x" : "F:/效果图/新建文件夹/2018.png",
+                        "landscape-1366h@2x" : "F:/效果图/新建文件夹/2732.png"
                     }
                 },
                 "android" : {

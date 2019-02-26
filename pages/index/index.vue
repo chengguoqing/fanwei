@@ -1,6 +1,6 @@
 <template>
 	<view class="sd_jh_deer">
-		<view class="fz30 cf cen">
+		<view class="fz30 cf cen ">
 			<image src="../../static/img/logo.png" class="logo_ert"></image>
 
 			<view class="mt20">
@@ -14,14 +14,14 @@
 				<view class="fz32 ls">开启扫描</view>
 			</view>
 
-			<view class="ls cen fz32 sdf_jh_de4ert">
+		<!-- 	<view class="ls cen fz32 sdf_jh_de4ert">
 				苍鸟如何做到防伪唯一性
-			</view>
+			</view> -->
 
 
 		</view>
 
-		<view class="dibu_deer pt10 pm10 dx_row cen">
+		<!-- <view class="dibu_deer pt10 pm10 dx_row cen">
 			<view class="dx_col_12 ">
 				<image src="../../static/img/bottom/dsfdsfa_b.png" class="shouye_eet"></image>
 				<view class="fz26 ls">
@@ -35,7 +35,7 @@
 				</view>
 			</view>
 
-		</view>
+		</view> -->
 	</view>
 </template>
 <script>
@@ -48,9 +48,17 @@
 			saoma() {
 				uni.scanCode({
 					success: function(res) {
-						uni.navigateTo({
-							url:"/pages/check_results/index"
+					try{
+						uni.redirectTo({
+							url:"/pages/check_results/index?"+res.result.split("?")[1].split("&")[0]
 						})
+					}catch(e){
+						uni.redirectTo({
+							url:"/pages/check_results/index?code="
+						})
+					}
+					
+						
 					}
 				});
 			}
